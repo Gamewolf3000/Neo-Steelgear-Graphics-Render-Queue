@@ -42,5 +42,14 @@ struct CategoryResourceIdentifier
 	CategoryIdentifier categoryIdentifier;
 	ResourceIndex internalIndex;
 
-	bool operator==(const CategoryResourceIdentifier& other) const = default;
+	bool operator==(const CategoryResourceIdentifier& other) const
+	{
+		return categoryIdentifier == other.categoryIdentifier &&
+			internalIndex.allocatorIdentifier.heapChunkIndex ==
+			other.internalIndex.allocatorIdentifier.heapChunkIndex &&
+			internalIndex.allocatorIdentifier.internalIndex ==
+			other.internalIndex.allocatorIdentifier.internalIndex &&
+			internalIndex.descriptorIndex == other.internalIndex.descriptorIndex;
+		// Temporary implementation, can be made default once the internal types have op== implemented
+	}
 };
