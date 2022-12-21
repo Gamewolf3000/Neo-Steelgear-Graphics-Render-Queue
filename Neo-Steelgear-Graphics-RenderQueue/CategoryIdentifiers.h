@@ -41,4 +41,6 @@ struct CategoryResourceIdentifier
 {
 	CategoryIdentifier categoryIdentifier;
 	ResourceIndex internalIndex;
+
+	bool operator==(const CategoryResourceIdentifier& other) const = default;
 };
