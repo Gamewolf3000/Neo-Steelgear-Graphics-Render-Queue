@@ -1,4 +1,4 @@
-$libs = "Neo-Steelgear-Graphics-RenderQueue_Debug.lib", "Neo-Steelgear-Graphics-RenderQueue_Release.lib"
+$libs = "Neo-Steelgear-Graphics-RenderQueue64D.lib", "Neo-Steelgear-Graphics-RenderQueue64.lib"
 
 Get-ChildItem -Path "NSGG RenderQueue" -Include *.* -File -Recurse | foreach { $_.Delete()}
 

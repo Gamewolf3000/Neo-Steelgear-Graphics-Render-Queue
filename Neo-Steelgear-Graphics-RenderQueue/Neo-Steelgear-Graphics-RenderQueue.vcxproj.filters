@@ -129,6 +129,9 @@
     <ClInclude Include="Dear ImGui\imstb_truetype.h">
       <Filter>Dear ImGui</Filter>
     </ClInclude>
+    <ClInclude Include="Dear ImGui\imgui_stdlib.h">
+      <Filter>Dear ImGui</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="InnerLocalAllocator.cpp">
@@ -184,6 +187,9 @@
     </ClCompile>
     <ClCompile Include="ImguiContext.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Dear ImGui\imgui_stdlib.cpp">
+      <Filter>Dear ImGui</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
