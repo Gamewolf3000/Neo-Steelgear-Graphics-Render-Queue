@@ -43,11 +43,14 @@ void RenderQueueTimerCPU::SetActive(bool active)
 	isActive = active;
 }
 
-void RenderQueueTimerCPU::Reset(size_t nrOfBatches, size_t nrOfJobs)
+void RenderQueueTimerCPU::Reset()
 {
 	elapsedGlobalTime += GetElapsedTime(frameStart);
 	frameStart = std::chrono::steady_clock::now();
+}
 
+void RenderQueueTimerCPU::SetJobInfo(size_t nrOfBatches, size_t nrOfJobs)
+{
 	if (currentFrameTimes.batchPreparationTimes.size() == nrOfBatches &&
 		currentFrameTimes.batchExecutionTimes.size() == nrOfBatches &&
 		currentFrameTimes.jobPreparationTimes.size() == nrOfJobs &&
